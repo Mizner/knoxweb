@@ -1,0 +1,16 @@
+{
+  "name": "miznerism",
+  "version": "1.2.0",
+  "homepage": "https://github.com/Varying-Vagrant-Vagrants/VVV",
+  "authors": [
+    "Michael Mizner <mike@miznerism.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

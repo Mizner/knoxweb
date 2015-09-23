@@ -1,0 +1,150 @@
+.main-navigation button:before {
+		float: left;
+		content: "\f0c9";
+		font: normal normal normal 14px/1 FontAwesome;
+		padding-right: 15px;
+		line-height: 16px;
+	}
+.main-navigation button:focus {
+    outline: none;
+}
+.main-navigation {
+	clear: both;
+	display: block;
+	float: right;
+	height: inherit;
+	border: none;
+
+	button {
+		border: none;
+		border-radius: 0;
+		font-size: 1em;
+		padding: 0 35px;
+		height: inherit;
+		background: $vols;
+	}
+	button[aria-expanded=true] {
+  		background: $lblue;
+	}
+
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		background: $lblue;
+		-webkit-font-smoothing: antialiased;
+
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 1.5em;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+	li {
+		// float: left;
+		position: relative;
+		display: flex;
+		line-height: 2em;
+    	font-size: 2em;
+
+
+    	:hover {
+			background: $vols;
+    	}
+
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		color: $light;
+		font-family: $font1;
+		padding: 0 0 0 10%;
+		width: 100%;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a {
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+.menu-main-menu-container {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    max-width: 600px;
+}
+
+// @media screen and (min-width: 37.5em) {
+// 	.menu-toggle {
+// 		display: none;
+// 	}
+// 	.main-navigation ul {
+// 		display: block;
+// 	}
+// }
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	& .nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	& .nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}

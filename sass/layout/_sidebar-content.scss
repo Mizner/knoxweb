@@ -1,0 +1,34 @@
+.content-area {
+	margin: 0 0 0 (-$size__site-sidebar);
+	width: $size__site-main;
+}
+@media only screen and (min-width: 1000px) {
+.content-area {
+	float: right;
+}
+}
+
+.site-main {
+	margin: 0 0 0 $size__site-sidebar;
+    padding: $site__padding;
+}
+
+.site-content .widget-area {
+	float: none;
+	overflow: hidden;
+}
+@media only screen and (min-width: 1000px) {
+	.site-content .widget-area {
+		width: $size__site-sidebar;
+}
+}
+@media only screen and (min-width: 1000px) {
+.site-content .widget-area {
+	float: left;
+}
+}
+
+.site-footer {
+	clear: both;
+	width: $size__site-main;
+}
