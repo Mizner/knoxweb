@@ -11,17 +11,18 @@
 .main-navigation {
 	clear: both;
 	display: block;
-	float: right;
-	height: inherit;
 	border: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
 
 	button {
 		border: none;
 		border-radius: 0;
 		font-size: 1em;
-		padding: 0 35px;
-		height: inherit;
 		background: $vols;
+		height: inherit;
 	}
 	button[aria-expanded=true] {
   		background: $lblue;
@@ -113,7 +114,7 @@
 	display: block;
 }
 .menu-main-menu-container {
-    position: absolute;
+    position: fixed;
     width: 100%;
     right: 0;
     max-width: 600px;

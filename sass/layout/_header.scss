@@ -9,7 +9,7 @@
     }
 }
 .site-description {
-    padding: 100px 0;
+    padding: 200px 0;
     text-align: center;
     font-size: 4rem;
     margin: 0;
@@ -19,9 +19,10 @@
     text-decoration: none !important;
     font-family: $font1;
     -webkit-font-smoothing: antialiased;
-    font-size: 1.7rem;
-    line-height: 3.3rem;
+    font-size: 2.9rem;
+    line-height: 100%;
     padding: 0;
+    vertical-align: middle;
 }
 .site-title {
     padding: 0;
@@ -37,7 +38,7 @@
 }
 .fixed-header {
     background-color: $dblue;
-    height: 3em;
+    height: auto;
     position: fixed;
     width: 100%;
 }
@@ -46,7 +47,7 @@
     padding: 0 0 0 5%;
 }
 .logosvg {
-    height: inherit;
+    height: 3.3rem;
     float: left;
     padding: 5px;
 }
