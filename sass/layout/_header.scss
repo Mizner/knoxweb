@@ -14,7 +14,8 @@
     font-size: 4rem;
     margin: 0;
 }
-.site-title, .site-title a, .site-title a:visited {
+.site-title {
+    a, a:visited {
     color: $light;
     text-decoration: none !important;
     font-family: $font1;
@@ -23,6 +24,7 @@
     line-height: 100%;
     padding: 0;
     vertical-align: middle;
+    }
 }
 .site-title {
     padding: 0;
