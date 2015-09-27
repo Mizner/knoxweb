@@ -22,9 +22,7 @@
             <div class="getQuote" id="getQuote">
                 <button>Request A Quote</button>
                 <div class="quoteForm">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
+
                 </div>
             </div>
 
@@ -35,7 +33,7 @@
 
 <?php wp_footer(); ?>
 
-
+<!-- Change header background on scroll -->
 <script>
 $(document).ready (function () {
     $(window).scroll (function () {
@@ -48,7 +46,7 @@ $(document).ready (function () {
     })
 })
 </script>
-
+<!--get a quote form-->
 <script>
     $(document).ready(function() {
 

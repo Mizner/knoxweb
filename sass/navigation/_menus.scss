@@ -115,10 +115,16 @@
 	display: block;
 }
 .menu-main-menu-container {
+    width: 0;
+}
+.toggled .menu-main-menu-container {
     position: fixed;
     width: 100%;
     right: 0;
     max-width: 600px;
+    height: 100%;
+    background-color: $lblue;
+    transition: width .5s ease-in;
 }
 
 // @media screen and (min-width: 37.5em) {
@@ -202,9 +208,4 @@
     position: absolute;
     top: 50%;
     margin-top: -3px;
-}
-/*menu background*/
-.toggled > div {
-    height: 100%;
-    background-color: $lblue;
 }

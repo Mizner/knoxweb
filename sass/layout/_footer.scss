@@ -1,6 +1,9 @@
 footer {
     position: relative;
 }
+.site-info {
+    clear: both;
+}
 .site-footer {
     clear: both;
     width: $size__site-main;
@@ -21,7 +24,15 @@ footer li {
 }
 .footerWidgets {
     width: 100%;
+    padding: 0 10%;
 }
+.footerWidgets {
+    ul, div {
+        padding: 0;
+        margin: 0 0 0 5px;
+    }
+}
+
 .socialIcons ul {
     display: -webkit-inline-box;
 }
@@ -53,21 +64,29 @@ footer li {
 .quoteForm {
     height: 0;
     overflow: hidden;
+    background-color: $vols;
+    transition: height .5s ease-out;
     input {
         margin: 10px auto;
         width: 80%;
     }
 }
 .show .quoteForm {
-    height: auto;
-    padding: 45px 1px;
+    height: 300px;
     background-color: $vols;
-    transition: .5s ease-in-out;
+    transition: height .5s ease-in;
 }
 .show button {
-    background-color: black;
+    background-color: $dark;
 }
 .getQuote button:focus {
     border: none;
     outline: none;
 }
+/*Zoho Form*/
+.tempHeadContBdr .frmTitle {
+    display: none !important;
+}
+
+
+
