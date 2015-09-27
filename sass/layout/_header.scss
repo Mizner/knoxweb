@@ -53,6 +53,7 @@
 /*Header Changes on Scroll - jQuery in footer.php*/
 .headerScroll {
     background-color: $dblue;
+    transition: background .7s cubic-bezier(0.62, 0.76, 0.72, 1.43);
 }
 
 /*Video Background*/
