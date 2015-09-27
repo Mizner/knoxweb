@@ -1,10 +1,10 @@
-.main-navigation button:before {
-		float: left;
-		content: "\f0c9";
-		font: normal normal normal 14px/1 FontAwesome;
-		padding-right: 15px;
-		line-height: 16px;
-	}
+.main-navigation button {
+	line-height: initial;
+	padding: 0 10px;
+	text-align: right;
+	width: 150px;
+}
+
 .main-navigation button:focus {
     outline: none;
 }
@@ -20,9 +20,10 @@
 	button {
 		border: none;
 		border-radius: 0;
-		font-size: 1em;
+		font-size: 1.8em;
 		background: $vols;
 		height: inherit;
+		-webkit-font-smoothing: antialiased;
 	}
 	button[aria-expanded=true] {
   		background: $lblue;
@@ -148,4 +149,57 @@
 		text-align: right;
 		width: 50%;
 	}
+}
+
+
+/*Awesome Menu Icon and Animation*/
+
+.main-navigation .menuButton,
+.main-navigation .menuButton:before,
+.main-navigation .menuButton:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+
+.main-navigation .menuButton:before {
+  top: -10px;
+}
+
+.main-navigation .menuButton:after {
+  bottom: -10px;
+}
+
+.main-navigation .menuButton,
+.main-navigation .menuButton:before,
+.main-navigation .menuButton:after {
+  transition: all 500ms ease-in-out;
+}
+
+.main-navigation.toggled .menuButton {
+  background-color: transparent;
+}
+
+.main-navigation.toggled .menuButton:before,
+.main-navigation.toggled .menuButton:after {
+  top: 0;
+}
+
+.main-navigation.toggled .menuButton:before {
+  transform: rotate(45deg);
+}
+
+.main-navigation.toggled .menuButton:after {
+  transform: rotate(-45deg);
+}
+/*centers button in menu*/
+.menuContainer {
+    position: absolute;
+    top: 50%;
+    margin-top: -3px;
 }
