@@ -30,7 +30,13 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'knoxweb' ); ?></a>
-	<header id="masthead" class="site-header" role="banner" style="background: url('<?php header_image(); ?>') left center no-repeat black;">
+	<header id="masthead" class="site-header" role="banner">
+	<div class="videoBackground">
+		<video autoplay loop muted poster="<?php header_image(); ?>" id="video-bg">
+ 			<source src="video.webm" type="video/webm">
+			<source src="/wp-content/uploads/2015/09/onTablet.mp4" type="video/mp4">
+		</video>
+	</div>
     <div class="fixed-header">
     	<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'knoxweb' ); ?></button>
