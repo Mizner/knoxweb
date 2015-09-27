@@ -9,10 +9,11 @@
     }
 }
 .site-description {
-    padding: 200px 0;
+    padding: 100px 0 50px;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
 }
 .site-title {
     a, a:visited {

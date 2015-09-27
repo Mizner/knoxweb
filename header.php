@@ -31,6 +31,19 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'knoxweb' ); ?></a>
 	<header id="masthead" class="site-header" role="banner">
+
+			<?php
+				if ( is_home() ) {
+			    	// This is the blog posts index
+			    	get_sidebar( 'blog' );
+				} else {
+			    	// This is not the blog posts index
+
+				}
+			?>
+
+
+
 	<div class="videoBackground">
 		<video autoplay loop muted poster="<?php header_image(); ?>" id="video-bg">
  			<source src="video.webm" type="video/webm">

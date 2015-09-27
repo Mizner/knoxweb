@@ -1,4 +1,17 @@
-$color__background-body: black;
+
+/* COLOR SCHEME */
+
+$light: #F9FFF7;
+$vols: #FF8200;
+$dblue: #003345;
+$lblue: #00698C;
+$brown: #573009;
+$dark: #2D2D2D;
+
+/*Site Areas*/
+
+
+$color__background-body: $dark;
 $color__background-screen: #F9FFF7;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
@@ -11,8 +24,8 @@ $color__text-input-focus: #111;
 $color__link: royalblue;
 $color__link-visited: purple;
 $color__link-hover: midnightblue;
-$color__text-main: #573009;
-$color__text-headings: #573009;
+$color__text-main: $dark;
+$color__text-headings: $dark;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
@@ -21,14 +34,6 @@ $color__border-input: #ccc;
 $color__border-abbr: #666;
 
 
-/* COLOR SCHEME */
-
-$light: #F9FFF7;
-$vols: #FF8200;
-$dblue: #003345;
-$lblue: #00698C;
-$brown: #573009;
-$dark: #2D2D2D;
 
 
 
