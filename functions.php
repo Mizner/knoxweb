@@ -171,3 +171,6 @@ function enqueue_font_awesome() {
 
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
 }
+
+// disable soliloquy stylesheet
+add_filter( 'soliloquy_stylesheets', '__return_empty_string', 500 );

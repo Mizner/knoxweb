@@ -1,0 +1,20 @@
+/* Rules for homehero.php called into the header for the homepage only */
+.home .site-header {
+    min-height: 700px;
+    height: $homeHeight;
+}
+.homeHero {
+    position: relative;
+    height: $homeHeight;
+    width: 100%;
+
+}
+.homeTitle {
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* Rules for the homepage template */

@@ -24,32 +24,37 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<!--homepage video fix-->
+<style>
+.home header {
+    background: transparent !important;
+}
+</style>
+
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'knoxweb' ); ?></a>
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header" role="banner" style="background: url('<?php
+																						  if(has_post_thumbnail())
+																							{ echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'full', false )[0]
+																								;}
 
-			<?php
-				if ( is_home() ) {
-			    	// This is the blog posts index
-			    	get_sidebar( 'blog' );
-				} else {
-			    	// This is not the blog posts index
+																						  else {
+																						     echo header_image();
+																						    }
+																							?>'); z-index: -101;">
 
+
+
+				<?php
+				if ( is_front_page() ) {
+				    echo '<div class="videoBackground"><video autoplay loop muted poster="" id="video-bg"><source src="video.webm" type="video/webm"><source src="/wp-content/uploads/2015/09/onTablet.mp4" type="video/mp4"></video></div>' ;
 				}
-			?>
+				?>
 
-
-
-	<div class="videoBackground">
-		<video autoplay loop muted poster="<?php header_image(); ?>" id="video-bg">
- 			<source src="video.webm" type="video/webm">
-			<source src="/wp-content/uploads/2015/09/onTablet.mp4" type="video/mp4">
-		</video>
-	</div>
     <div class="fixed-header">
     	<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
@@ -191,7 +196,16 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 	</div><!-- .fixed-header -->
-	<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+			<div class="featuredHeader">
+			<?php
+				if ( is_front_page() ) {
+				    include('homehero.php');
+				}
+				else {
+					the_title( '<h1 class="entry-title">', '</h1>' );
+				}
+				?>
+			</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
