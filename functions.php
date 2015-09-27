@@ -107,9 +107,6 @@ function knoxweb_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-}
-add_action( 'widgets_init', 'knoxweb_widgets_init' );
-
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer', 'knoxweb' ),
 		'id'            => 'footer',
@@ -119,7 +116,7 @@ add_action( 'widgets_init', 'knoxweb_widgets_init' );
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-
+}
 add_action( 'widgets_init', 'knoxweb_widgets_init' );
 
 /**

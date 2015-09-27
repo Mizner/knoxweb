@@ -81,8 +81,8 @@
 		// float: left;
 		position: relative;
 		display: flex;
-		line-height: 2em;
-    	font-size: 2em;
+		line-height: 2.3em;
+        font-size: 2.3em;
 
 
     	:hover {
@@ -202,4 +202,9 @@
     position: absolute;
     top: 50%;
     margin-top: -3px;
+}
+/*menu background*/
+.toggled > div {
+    height: 100%;
+    background-color: $lblue;
 }

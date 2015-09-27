@@ -14,11 +14,24 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="footerWidgets"><?php dynamic_sidebar( 'footer' ); ?></div>
 		<div class="site-info">
 			<p id="footer-info"><a href="http://www.knoxweb.com">@knoxweb</a> | All Rights Reserved &copy; 1996-<?php echo date("Y") ?></p>
 		</div><!-- .site-info -->
+
+            <div class="getQuote" id="getQuote">
+                <button>Request A Quote</button>
+                <div class="quoteForm">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                </div>
+            </div>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+
+
 
 <?php wp_footer(); ?>
 
@@ -34,6 +47,18 @@ $(document).ready (function () {
             }
     })
 })
+</script>
+
+<script>
+    $(document).ready(function() {
+
+  var $toggleTrigger = $('#getQuote button').eq(-1);
+
+  $toggleTrigger.click(function() {
+    $("#getQuote").toggleClass("show");
+  });
+
+});
 </script>
 
 </body>

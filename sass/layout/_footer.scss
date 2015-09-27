@@ -1,0 +1,73 @@
+footer {
+    position: relative;
+}
+.site-footer {
+    clear: both;
+    width: $size__site-main;
+    background: $dark;
+    color: $light;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+footer .widget {
+    width: 25%;
+    float: left;
+    padding: 35px;
+    text-align: left;
+}
+footer li {
+    list-style-type: none;
+}
+.footerWidgets {
+    width: 100%;
+}
+.socialIcons ul {
+    display: -webkit-inline-box;
+}
+
+.socialIcons li a:hover {
+    color: $vols;
+}
+.socialIcons li a {
+    font-size: 27px;
+    padding: 7px;
+    color: $light;
+}
+
+/*get a quote*/
+.getQuote {
+    position: fixed;
+    right: 10%;
+    bottom: 0;
+    width: 25%;
+    display: block;
+}
+.getQuote button {
+    border: none;
+    background-color: $vols;
+    border-radius: 0;
+    font-size: 17px;
+    width: 100%;
+}
+.quoteForm {
+    height: 0;
+    overflow: hidden;
+    input {
+        margin: 10px auto;
+        width: 80%;
+    }
+}
+.show .quoteForm {
+    height: auto;
+    padding: 45px 1px;
+    background-color: $vols;
+    transition: .5s ease-in-out;
+}
+.show button {
+    background-color: black;
+}
+.getQuote button:focus {
+    border: none;
+    outline: none;
+}
