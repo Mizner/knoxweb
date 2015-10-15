@@ -30,7 +30,7 @@ gulp.task('js', function() {
     'js/*'
   ])
     .pipe( concat('output.min.js') ) // concat pulls all our files together before minifying them
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(rename('main.js'))
     .pipe(gulp.dest(''))
 });
