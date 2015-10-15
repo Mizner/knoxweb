@@ -13,12 +13,9 @@
 <html <?php language_attributes(); ?>>
 <head>
 <!--enqueue below later -->
-<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-<script src="//use.typekit.net/mnr3gor.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<!--enqueue above later -->
+<!--   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+ --><!--   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+ --><!--enqueue above later -->
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
