@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme. STUFF
+ * The header for our theme.
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
@@ -61,7 +61,7 @@
 				<div class="menuContainer">
 					<div class="menuButton"></div>
 				</div>
-				<div class="menuTitle"><?php esc_html_e( 'Menu', 'knoxweb' ); ?></div>
+				<div class="menuTitle"><?php esc_html_e( 'Menux', 'knoxweb' ); ?></div>
 			</button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
