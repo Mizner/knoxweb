@@ -178,7 +178,7 @@ remove_action( 'wp_print_styles', 'print_emoji_styles' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 
-// Async load
+// Async loads
 function async_scripts($url)
 {
     if ( strpos( $url, '#asyncload') === false )
