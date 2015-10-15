@@ -1,13 +1,19 @@
 /* Rules for homehero.php called into the header for the homepage only */
 .home .site-header {
-    min-height: 700px;
     height: $homeHeight;
 }
 .homeHero {
     position: relative;
     height: $homeHeight;
     width: 100%;
-
+}
+@media only screen and (min-width: 1024px) {
+.homeHero {
+    height: $homeHeightDesktop;
+}
+.home .site-header {
+    height: $homeHeightDesktop;
+}
 }
 .homeTitle {
     position: absolute;

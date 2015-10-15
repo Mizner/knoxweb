@@ -60,7 +60,15 @@
 }
 .site-branding {
     height: inherit;
-    padding: 0 0 0 5%;
+    width: 245px;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 1100px) {
+    .site-branding {
+        padding: 0 0 0 5%;
+        width: initial;
+        margin: inital;
+    }
 }
 .logosvg {
     height: 3.3rem;

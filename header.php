@@ -61,7 +61,7 @@
 				<div class="menuContainer">
 					<div class="menuButton"></div>
 				</div>
-				<div class="menuTitle"><?php esc_html_e( 'Menux', 'knoxweb' ); ?></div>
+				<div class="menuTitle"><?php esc_html_e( 'Menu', 'knoxweb' ); ?></div>
 			</button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->

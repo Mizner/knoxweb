@@ -14,10 +14,15 @@ footer {
 }
 
 footer .widget {
-    width: 25%;
+    width: 100%;
     float: left;
     padding: 35px;
     text-align: left;
+}
+@media only screen and (min-width: 1024px) {
+    footer .widget {
+        width: 25%;
+    }
 }
 footer li {
     list-style-type: none;

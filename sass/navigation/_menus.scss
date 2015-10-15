@@ -1,34 +1,29 @@
-.main-navigation button {
-	line-height: initial;
-	padding: 0 10px;
-	text-align: right;
-	width: 150px;
-}
-
-.main-navigation button:focus {
-    outline: none;
-}
 .main-navigation {
 	clear: both;
 	display: block;
 	border: none;
-	position: absolute;
 	top: 0;
 	right: 0;
 	height: 100%;
 
 	button {
+        line-height: initial;
+        padding: 10px 10px;
+        width: 150px;
 		border: none;
 		border-radius: 0;
 		font-size: 1.8em;
 		background: $vols;
 		height: inherit;
 		-webkit-font-smoothing: antialiased;
+        width: 100%;
 	}
 	button[aria-expanded=true] {
   		background: $lblue;
 	}
-
+    button:focus {
+        outline: none;
+    }
 
 	ul {
 		display: none;
@@ -108,6 +103,27 @@
 	.current_page_ancestor > a {
 	}
 }
+@media only screen and (min-width: 1025px) {
+    .main-navigation {
+        position: absolute;
+
+        button {
+            text-align: right;
+        }
+    }
+
+}
+/*button in menu*/
+.menuContainer {
+    position: absolute;
+    top: 25%;
+    margin-top: -3px;
+}
+@media only screen and (min-width: 1025px) {
+    .menuContainer {
+        top: 50%;
+    }
+}
 
 /* Small menu. */
 .menu-toggle,
@@ -126,15 +142,6 @@
     background-color: $lblue;
     transition: width .5s ease-in;
 }
-
-// @media screen and (min-width: 37.5em) {
-// 	.menu-toggle {
-// 		display: none;
-// 	}
-// 	.main-navigation ul {
-// 		display: block;
-// 	}
-// }
 
 .comment-navigation,
 .posts-navigation,
@@ -156,7 +163,10 @@
 		width: 50%;
 	}
 }
-
+/*Logo Color*/
+.st0 {
+    fill: $light !important;
+}
 
 /*Awesome Menu Icon and Animation*/
 
@@ -167,7 +177,7 @@
   border-radius: 1px;
   height: 5px;
   width: 35px;
-  background: white;
+  background: $light;
   position: absolute;
   display: block;
   content: '';
@@ -202,10 +212,4 @@
 
 .main-navigation.toggled .menuButton:after {
   transform: rotate(-45deg);
-}
-/*centers button in menu*/
-.menuContainer {
-    position: absolute;
-    top: 50%;
-    margin-top: -3px;
 }
