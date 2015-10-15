@@ -35,7 +35,7 @@
 
 <!-- Change header background on scroll -->
 <script>
-$(function () {
+$(document).ready(function () {
     $(window).scroll (function () {
         var sT = $(this).scrollTop();
             if (sT >= 2) {
@@ -48,7 +48,7 @@ $(function () {
 </script>
 <!--get a quote form-->
 <script>
-    $(function() {
+$(document).ready(function() {
 
   var $toggleTrigger = $('#getQuote button').eq(-1);
 
