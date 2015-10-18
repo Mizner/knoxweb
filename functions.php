@@ -125,6 +125,16 @@ add_action( 'widgets_init', 'knoxweb_widgets_init' );
 function knoxweb_scripts() {
 	wp_enqueue_style( 'knoxweb-style', get_stylesheet_uri() );
 
+	// Fix for CSS minify & Theme Detection
+if ( is_user_logged_in() ) {
+    wp_register_style(
+        'my-style',
+        get_bloginfo( 'stylesheet_directory' ) . '/sass/site.css',
+        false,
+        0.1
+    );
+    wp_enqueue_style( 'my-style' );}
+
 	// wp_enqueue_script( 'jquery' );
 
 	// wp_enqueue_script( 'knoxweb-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
@@ -195,3 +205,5 @@ add_filter( 'clean_url', 'async_scripts', 11, 1 );
 // Contact Form 7
 add_filter( 'wpcf7_load_js', '__return_false' );
 add_filter( 'wpcf7_load_css', '__return_false' );
+
+
