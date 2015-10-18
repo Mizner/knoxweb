@@ -1,11 +1,12 @@
 /* Rules for homehero.php called into the header for the homepage only */
 .home .site-header {
-    height: $homeHeight;
 }
 .homeHero {
     position: relative;
-    height: $homeHeight;
     width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 @media only screen and (min-width: 1024px) {
 .homeHero {
@@ -16,10 +17,7 @@
 }
 }
 .homeTitle {
-    position: absolute;
-    bottom: 15px;
     text-align: center;
-    width: 100%;
 }
 
 

@@ -20,6 +20,15 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(''));
 });
 
+gulp.task('headsass', function () {
+  gulp.src('./inline/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(minifyCSS())
+    .pipe(rename('head.css'))
+    .pipe(gulp.dest('inline'));
+});
+
 gulp.task('html', function() {
   gulp.src('source/jade/*.jade')
     .pipe(jade())
@@ -27,7 +36,7 @@ gulp.task('html', function() {
 });
 gulp.task('js', function() {
   gulp.src([
-    'js/*'
+    'jsgulp/*'
   ])
     .pipe( concat('output.min.js') ) // concat pulls all our files together before minifying them
     .pipe( uglify() )
@@ -47,8 +56,9 @@ gulp.task('browser-sync', function() {
 
 
 gulp.task('watch', ['browser-sync'], function () {
+  gulp.watch('./inline/**/*.scss', ['headsass']);
   gulp.watch('./sass/**/*.scss', ['sass']);
-  gulp.watch('js/*', ['js']);
+  gulp.watch('jsgulp/*', ['js']);
   gulp.watch('*.php', reload);
 });
 

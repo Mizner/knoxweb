@@ -19,10 +19,10 @@
 			<p id="footer-info"><a href="http://www.knoxweb.com">@knoxweb</a> | All Rights Reserved &copy; 1996-<?php echo date("Y") ?></p>
 		</div><!-- .site-info -->
 
-            <div class="getQuote" id="getQuote">
-                <button>Request A Quote</button>
-                <div class="quoteForm">
-
+            <div class="getQuoteContainer">
+                <button id="getQuote">Request A Quote</button>
+                <div id="quoteForm" class="">
+                    <?php echo do_shortcode('[contact-form-7 id="7001" title="Get A Quote"]'); ?>
                 </div>
             </div>
 
@@ -30,43 +30,8 @@
 </div><!-- #page -->
 
 
-
 <?php wp_footer(); ?>
 
-<!-- Change header background on scroll -->
-<script>
-$(document).ready(function () {
-    $(window).scroll (function () {
-        var sT = $(this).scrollTop();
-            if (sT >= 2) {
-                $('.fixed-header').addClass('headerScroll')
-            }else {
-                $('.fixed-header').removeClass('headerScroll')
-            }
-    })
-})
-</script>
-<!--get a quote form-->
-<script>
-$(document).ready(function() {
-
-  var $toggleTrigger = $('#getQuote button').eq(-1);
-
-  $toggleTrigger.click(function() {
-    $("#getQuote").toggleClass("show");
-  });
-
-});
-</script>
-<!-- Load Google Font -->
-<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-<script>
-  WebFont.load({
-    google: {
-      families: ['Montserrat']
-    }
-  });
-</script>
 
 
 </body>
