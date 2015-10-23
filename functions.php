@@ -125,15 +125,15 @@ add_action( 'widgets_init', 'knoxweb_widgets_init' );
 function knoxweb_scripts() {
 	wp_enqueue_style( 'knoxweb-style', get_stylesheet_uri() );
 
-	// Fix for CSS minify & Theme Detection
-if ( is_user_logged_in() ) {
-    wp_register_style(
-        'my-style',
-        get_bloginfo( 'stylesheet_directory' ) . '/sass/site.css',
-        false,
-        0.1
-    );
-    wp_enqueue_style( 'my-style' );}
+// 	// Fix for CSS minify & Theme Detection
+// if ( is_user_logged_in() ) {
+//     wp_register_style(
+//         'my-style',
+//         get_bloginfo( 'stylesheet_directory' ) . '/sass/site.css',
+//         false,
+//         0.1
+//     );
+//     wp_enqueue_style( 'my-style' );}
 
 	// wp_enqueue_script( 'jquery' );
 
@@ -207,3 +207,109 @@ add_filter( 'wpcf7_load_js', '__return_false' );
 add_filter( 'wpcf7_load_css', '__return_false' );
 
 
+// Custom Post Type
+add_action( 'init', 'cptui_register_my_cpts' );
+function cptui_register_my_cpts() {
+	$labels = array(
+		"name" => "Portfolio",
+		"singular_name" => "Portfolio",
+		);
+
+	$args = array(
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"show_ui" => true,
+		"has_archive" => true,
+		"show_in_menu" => true,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array( "slug" => "portfolio", "with_front" => true ),
+		"query_var" => true,
+
+	);
+	register_post_type( "portfolio", $args );
+
+// End of cptui_register_my_cpts()
+}
+// Custom Fields
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_portfolio',
+		'title' => 'Portfolio',
+		'fields' => array (
+			array (
+				'key' => 'field_5625322e96fd0',
+				'label' => 'Image',
+				'name' => 'image',
+				'type' => 'image',
+				'instructions' => 'Upload the image for the portfolio',
+				'required' => 1,
+				'save_format' => 'url',
+				'preview_size' => 'medium',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_5625327096fd1',
+				'label' => 'Description',
+				'name' => 'description',
+				'type' => 'textarea',
+				'instructions' => 'Enter in a description of the image',
+				'required' => 1,
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'br',
+			),
+			array (
+				'key' => 'field_5625329c96fd2',
+				'label' => 'Client',
+				'name' => 'client',
+				'type' => 'text',
+				'required' => 1,
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'portfolio',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'permalink',
+				1 => 'the_content',
+				2 => 'excerpt',
+				3 => 'custom_fields',
+				4 => 'discussion',
+				5 => 'comments',
+				6 => 'revisions',
+				7 => 'slug',
+				8 => 'author',
+				9 => 'format',
+				10 => 'featured_image',
+				11 => 'categories',
+				12 => 'tags',
+				13 => 'send-trackbacks',
+			),
+		),
+		'menu_order' => 0,
+	));
+}
