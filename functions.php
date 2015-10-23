@@ -8,75 +8,75 @@
  */
 
 if ( ! function_exists( 'knoxweb_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function knoxweb_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on knoxweb, use a find and replace
-	 * to change 'knoxweb' to the name of your theme in all the template files
-	 */
-	load_theme_textdomain( 'knoxweb', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
 	 */
-	add_theme_support( 'post-thumbnails' );
+	function knoxweb_setup() {
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on knoxweb, use a find and replace
+		 * to change 'knoxweb' to the name of your theme in all the template files
+		 */
+		load_theme_textdomain( 'knoxweb', get_template_directory() . '/languages' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'knoxweb' ),
-	) );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
+		/*
+		 * Let WordPress manage the document title.
+		 * By adding theme support, we declare that this theme does not use a
+		 * hard-coded <title> tag in the document head, and expect WordPress to
+		 * provide it for us.
+		 */
+		add_theme_support( 'title-tag' );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+		add_theme_support( 'post-thumbnails' );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'knoxweb_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-}
+		// This theme uses wp_nav_menu() in one location.
+		register_nav_menus( array(
+			'primary' => esc_html__( 'Primary Menu', 'knoxweb' ),
+		) );
+
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
+
+		/*
+		 * Enable support for Post Formats.
+		 * See https://developer.wordpress.org/themes/functionality/post-formats/
+		 */
+		add_theme_support( 'post-formats', array(
+			'aside',
+			'image',
+			'video',
+			'quote',
+			'link',
+		) );
+
+		// Set up the WordPress core custom background feature.
+		add_theme_support( 'custom-background', apply_filters( 'knoxweb_custom_background_args', array(
+			'default-color' => 'ffffff',
+			'default-image' => '',
+		) ) );
+	}
 endif; // knoxweb_setup
 add_action( 'after_setup_theme', 'knoxweb_setup' );
 
@@ -90,6 +90,7 @@ add_action( 'after_setup_theme', 'knoxweb_setup' );
 function knoxweb_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'knoxweb_content_width', 640 );
 }
+
 add_action( 'after_setup_theme', 'knoxweb_content_width', 0 );
 
 /**
@@ -117,6 +118,7 @@ function knoxweb_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
+
 add_action( 'widgets_init', 'knoxweb_widgets_init' );
 
 /**
@@ -147,6 +149,7 @@ function knoxweb_scripts() {
 	// 	wp_enqueue_script( 'comment-reply' );
 	// }
 }
+
 add_action( 'wp_enqueue_scripts', 'knoxweb_scripts' );
 
 /**
@@ -175,141 +178,41 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 // /**
-//  * Add font awesome
+// * Add font awesome
 // */
 // add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
 // function enqueue_font_awesome() {
 
-// 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
+// wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
 // }
 
-// disable emoji's
+// Disable emoji's.
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 
-// Async loads
-function async_scripts($url)
-{
-    if ( strpos( $url, '#asyncload') === false )
-        return $url;
-    else if ( is_admin() )
-        return str_replace( '#asyncload', '', $url );
-    else
-	return str_replace( '#asyncload', '', $url )."' async='async";
-    }
+/** Async loads. **/
+function async_scripts( $url ) {
+	if ( strpos( $url, '#asyncload' ) === false ) {
+		return $url;
+	} else if ( is_admin() ) {
+		return str_replace( '#asyncload', '', $url );
+	} else {
+		return str_replace( '#asyncload', '', $url ) . "' async='async";
+	}
+}
+
 add_filter( 'clean_url', 'async_scripts', 11, 1 );
 
-// Contact Form 7
+/** Load CSS in Footer. **/
+function prefix_add_footer_styles() {
+	wp_enqueue_style( 'your-style-id', get_template_directory_uri() . './style.css' );
+};
+add_action( 'get_footer', 'prefix_add_footer_styles' );
+
+// Contact Form 7.
 add_filter( 'wpcf7_load_js', '__return_false' );
 add_filter( 'wpcf7_load_css', '__return_false' );
 
-
-// Custom Post Type
-add_action( 'init', 'cptui_register_my_cpts' );
-function cptui_register_my_cpts() {
-	$labels = array(
-		"name" => "Portfolio",
-		"singular_name" => "Portfolio",
-		);
-
-	$args = array(
-		"labels" => $labels,
-		"description" => "",
-		"public" => true,
-		"show_ui" => true,
-		"has_archive" => true,
-		"show_in_menu" => true,
-		"exclude_from_search" => false,
-		"capability_type" => "post",
-		"map_meta_cap" => true,
-		"hierarchical" => false,
-		"rewrite" => array( "slug" => "portfolio", "with_front" => true ),
-		"query_var" => true,
-
-	);
-	register_post_type( "portfolio", $args );
-
-// End of cptui_register_my_cpts()
-}
-// Custom Fields
-if(function_exists("register_field_group"))
-{
-	register_field_group(array (
-		'id' => 'acf_portfolio',
-		'title' => 'Portfolio',
-		'fields' => array (
-			array (
-				'key' => 'field_5625322e96fd0',
-				'label' => 'Image',
-				'name' => 'image',
-				'type' => 'image',
-				'instructions' => 'Upload the image for the portfolio',
-				'required' => 1,
-				'save_format' => 'url',
-				'preview_size' => 'medium',
-				'library' => 'all',
-			),
-			array (
-				'key' => 'field_5625327096fd1',
-				'label' => 'Description',
-				'name' => 'description',
-				'type' => 'textarea',
-				'instructions' => 'Enter in a description of the image',
-				'required' => 1,
-				'default_value' => '',
-				'placeholder' => '',
-				'maxlength' => '',
-				'rows' => '',
-				'formatting' => 'br',
-			),
-			array (
-				'key' => 'field_5625329c96fd2',
-				'label' => 'Client',
-				'name' => 'client',
-				'type' => 'text',
-				'required' => 1,
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'portfolio',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'default',
-			'hide_on_screen' => array (
-				0 => 'permalink',
-				1 => 'the_content',
-				2 => 'excerpt',
-				3 => 'custom_fields',
-				4 => 'discussion',
-				5 => 'comments',
-				6 => 'revisions',
-				7 => 'slug',
-				8 => 'author',
-				9 => 'format',
-				10 => 'featured_image',
-				11 => 'categories',
-				12 => 'tags',
-				13 => 'send-trackbacks',
-			),
-		),
-		'menu_order' => 0,
-	));
-}
