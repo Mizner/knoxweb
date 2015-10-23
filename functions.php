@@ -125,7 +125,7 @@ add_action( 'widgets_init', 'knoxweb_widgets_init' );
  * Enqueue scripts and styles.
  */
 function knoxweb_scripts() {
-	wp_enqueue_style( 'knoxweb-style', get_stylesheet_uri() );
+//	wp_enqueue_style( 'knoxweb-style', get_stylesheet_uri() );
 
 // 	// Fix for CSS minify & Theme Detection
 // if ( is_user_logged_in() ) {
@@ -205,12 +205,6 @@ function async_scripts( $url ) {
 }
 
 add_filter( 'clean_url', 'async_scripts', 11, 1 );
-
-/** Load CSS in Footer. **/
-function prefix_add_footer_styles() {
-	wp_enqueue_style( 'your-style-id', get_template_directory_uri() . './style.css' );
-};
-add_action( 'get_footer', 'prefix_add_footer_styles' );
 
 // Contact Form 7.
 add_filter( 'wpcf7_load_js', '__return_false' );
