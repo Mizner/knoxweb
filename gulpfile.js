@@ -56,8 +56,8 @@ gulp.task('browser-sync', function() {
 
 
 gulp.task('watch', ['browser-sync'], function () {
-  gulp.watch('./inline/**/*.scss', ['headsass']);
-  gulp.watch('./sass/**/*.scss', ['sass']);
+  gulp.watch('./scssInline/**/*.scss', ['headsass']);
+  gulp.watch('./scssLink/**/*.scss', ['sass']);
   gulp.watch('jsgulp/*', ['js']);
   gulp.watch('*.php', reload);
 });

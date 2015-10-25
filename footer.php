@@ -48,6 +48,5 @@
 	else window.addEventListener('load', cb);
 </script>
 
-
 </body>
 </html>

@@ -21,7 +21,7 @@
 	<?php wp_head(); ?>
 
 	<style>
-		<?php include('inline/head.css') ?>
+		<?php include('scssInline/head.css') ?>
 	</style>
 
 </head>
@@ -58,7 +58,7 @@
 			</button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 
-			<button id="tog" class="search"><?php include( 'inc/search.php' ); ?></button>
+			<button id="tog" class="search" onclick="getfocus()"><?php include( 'inc/search.php' ); ?></button>
 			<div class="searchform" id="thing">
 
 				<?php get_search_form(); ?>

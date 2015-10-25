@@ -5,6 +5,7 @@ var thing = document.getElementById("thing");
 
 tog.addEventListener("click", function() {
   thing.classList.toggle("open");
+  document.getElementById("searchField").focus();
 });
 
 var gQuote = document.getElementById("getQuote");
