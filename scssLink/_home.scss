@@ -1,5 +1,6 @@
 /* Rules for homehero.php called into the header for the homepage only */
-.home .site-header {
+.home .site-content {
+    padding: 0;
 }
 .homeHero {
     position: relative;
@@ -21,4 +22,59 @@
 }
 
 
+.homeBlurbs h3 {
+    font-size: 1.8em;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 /* Rules for the homepage template */
+
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+@media all and (min-width: 600px) {
+  .homeBlurbs {
+    flex: 1 auto;
+  }
+}
+@media all and (min-width: 800px) {
+  .homeBlurbs {
+    flex: 1 0px;
+  }
+
+  .webDesignBlurb {
+    order: 1;
+  }
+
+  .webDevBlurb {
+    order: 2;
+  }
+
+  .seoBlurb {
+    order: 3;
+  }
+
+  .emailBlurb {
+    order: 4;
+  }
+  .socialMediaBlurb {
+    order: 5;
+  }
+}

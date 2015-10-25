@@ -4,6 +4,6 @@
 </div>
 
 <div class="homeHero">
-    <h2 class="homeTitle">HERE I AM!</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <h2 class="homeTitle">Design, Development, Marketing</h2>
+    <p>We build websites that will build your business.</p>
 </div>

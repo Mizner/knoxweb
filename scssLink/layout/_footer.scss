@@ -50,6 +50,11 @@ footer li {
     padding: 7px;
     color: $light;
 }
+.socialIcons svg:hover {
+    fill: $vols;
+    transform: scale(1.5);
+    transition: ease 0.5s;
+}
 
 /*get a quote*/
 .getQuote {
@@ -88,10 +93,5 @@ footer li {
     border: none;
     outline: none;
 }
-/*Zoho Form*/
-li.tempHeadContBdr {
-    display: none !important;
-}
-
 
 

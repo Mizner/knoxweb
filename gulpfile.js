@@ -12,7 +12,7 @@ var sass = require('gulp-sass');
 
 
 gulp.task('sass', function () {
-  gulp.src('./sass/**/*.scss')
+  gulp.src('./scssLink/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(minifyCSS())
@@ -21,12 +21,12 @@ gulp.task('sass', function () {
 });
 
 gulp.task('headsass', function () {
-  gulp.src('./inline/**/*.scss')
+  gulp.src('./scssInline/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(minifyCSS())
     .pipe(rename('head.css'))
-    .pipe(gulp.dest('inline'));
+    .pipe(gulp.dest('scssInline'));
 });
 
 gulp.task('html', function() {
